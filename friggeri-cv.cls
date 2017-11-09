@@ -164,7 +164,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
-  \textbf{#1}
+  #1
   \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #2}\\
   \parbox[l]{11.8cm}{%
