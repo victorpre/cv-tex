@@ -195,6 +195,24 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \let\section\oldsection
 }
 
+\RequirePackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+\newenvironment{rside}{%
+  \let\oldsection\section
+  \renewcommand{\section}[1]{
+    \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
+  }
+  \begin{textblock}{3.6}(16, 2.5)
+  \begin{flushleft}
+  \obeycr
+}{%
+  \restorecr
+  \end{flushleft}
+  \end{textblock}
+  \let\section\oldsection
+}
+
 %%%%%%%%%%%%%%%%
 % Footer %
 %%%%%%%%%%%%%%%%
